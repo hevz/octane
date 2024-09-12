@@ -109,7 +109,7 @@ BenchmarkSuite.config = {
 
 
 // Override the alert function to throw an exception instead.
-alert = function(s) {
+var alert = function(s) {
   throw "Alert called with argument: " + s;
 };
 

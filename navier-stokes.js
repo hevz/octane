@@ -51,12 +51,12 @@ function runNavierStokes()
 
 function checkResult(dens) {
 
-    this.result = 0;
+    var result = 0;
     for (var i=7000;i<7100;i++) {
-        this.result+=~~((dens[i]*10));
+        result+=~~((dens[i]*10));
     }
 
-    if (this.result!=77) {
+    if (result!=77) {
         throw(new Error("checksum failed"));
     }
 }

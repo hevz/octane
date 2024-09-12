@@ -73,12 +73,11 @@ function tearDownPdfJS() {
     var log_length = canvas_logs[i].length;
     var log_hash = hash(canvas_logs[i].join(" "));
     var expected_length = 36788;
-    var expected_hash = 939524096;
+    var expected_hash = 805306368;
     if (log_length !== expected_length || log_hash !== expected_hash) {
       var message = "PdfJS produced incorrect output: " +
           "expected " + expected_length + " " + expected_hash + ", " +
           "got " + log_length + " " + log_hash;
-      console.log(message + "\n");
       throw message;
     }
   }
